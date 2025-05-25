@@ -1,0 +1,12 @@
+---
+- name: Install NGINX (Debian/Ubuntu)
+  apt:
+    name: nginx
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Start and enable NGINX
+  service:
+    name: nginx
+    state: started
+    enabled: yes
