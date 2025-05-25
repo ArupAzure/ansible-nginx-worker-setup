@@ -1,0 +1,6 @@
+---
+- name: Install and configure NGINX on worker node
+  hosts: worker
+  become: yes
+  roles:
+    - nginx
